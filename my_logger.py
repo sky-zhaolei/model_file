@@ -19,6 +19,10 @@ class Mylogger(logging.Logger):
             handle2 = logging.FileHandler(file,encoding='utf-8')
             handle2.setFormatter(formatter)
             self.addHandler(handle2)
+
+
+logger = Mylogger("loggofile")
+
 if __name__ == '__main__':
     mlogger = Mylogger("py30")
     mlogger.info("测试一下输出的日志内容")
